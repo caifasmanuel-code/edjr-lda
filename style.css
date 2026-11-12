@@ -3,24 +3,26 @@
 body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6}
 h1,h2,h3{font-family:'Montserrat',sans-serif}
 a{text-decoration:none}
-/* TOPO + MENU - IGUAL AO ANTES */
+/* TOPO */
 .topbar{background:var(--navy);color:#fff;font-size:13px;padding:8px 0}
 .topbar .wrap{max-width:1200px;margin:auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 .topbar a{color:#fff}
 .socials{display:flex;gap:8px}
 .socials a{width:26px;height:26px;background:#fff;color:var(--navy);border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:12px}
+/* HEADER - COMPUTADOR */
 header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.header-wrap{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.logo{display:flex;align-items:center;gap:10px}
+.header-wrap{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:nowrap}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo img{height:55px;width:auto;display:block}
 .logo b{font-family:'Montserrat';font-size:32px;color:var(--navy);letter-spacing:-1px}
 .logo b i{color:var(--gold2);font-style:normal}
 .logo small{display:block;font-size:11px;letter-spacing:2px;color:var(--gold2);font-weight:700}
-nav{display:flex;gap:28px;align-items:center}
-nav a{color:var(--navy);font-weight:600;font-size:15px}
+nav{display:flex;gap:28px;align-items:center;flex-wrap:nowrap}
+nav a{color:var(--navy);font-weight:600;font-size:15px;white-space:nowrap}
 nav a.active{background:var(--gold);padding:8px 18px;border-radius:20px;color:#111}
-.btn-gold{background:var(--gold);color:#111!important;font-weight:700!important;padding:11px 20px;border-radius:25px;display:inline-block}
+.btn-gold{background:var(--gold);color:#111!important;font-weight:700!important;padding:11px 20px;border-radius:25px;display:inline-block;white-space:nowrap}
 .btn-navy{background:var(--navy);color:#fff;padding:11px 20px;border-radius:25px;font-weight:600;display:inline-block;margin-top:18px}
-/* HERO ANTIGO - PÁGINA PRINCIPAL */
+/* HERO */
 .hero{position:relative;min-height:520px;display:flex;align-items:center;color:#fff;overflow:hidden;background:#0A2A4A}
 .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1800&q=80') center/cover}
 .hero-bg:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0A2A4A 0%,#0A2A4A 38%,rgba(10,42,74,.2) 70%,transparent 100%)}
@@ -32,14 +34,12 @@ nav a.active{background:var(--gold);padding:8px 18px;border-radius:20px;color:#1
 .hero-btns{margin-top:26px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .btn-outline{border:1px solid #fff;color:#fff;padding:11px 18px;border-radius:25px;font-weight:600}
 .play{width:36px;height:36px;border:1px solid #fff;border-radius:50%;display:inline-grid;place-items:center;margin-right:8px}
-/* FAIXA SERVIÇOS ANTIGA */
 .strip{background:var(--navy);color:#fff}
 .strip-wrap{max-width:1200px;margin:auto;padding:18px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .strip-item{display:flex;gap:14px;align-items:center;border-right:1px solid rgba(255,255,255,.25);padding-right:14px}
 .strip-item:last-child{border:none}
 .strip-item i{font-size:32px}
 .strip-item b{font-size:15px;line-height:1.3;display:block}
-/* SOBRE ANTIGO */
 .about{max-width:1200px;margin:auto;padding:60px 20px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .about-images{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .about-images img{width:100%;height:220px;object-fit:cover;border-radius:14px}
@@ -50,7 +50,7 @@ nav a.active{background:var(--gold);padding:8px 18px;border-radius:20px;color:#1
 .values{margin-top:18px;display:grid;gap:12px}
 .values div{display:flex;gap:12px;align-items:center;font-weight:600;color:var(--navy)}
 .values i{width:38px;height:38px;background:var(--gold);border-radius:50%;display:grid;place-items:center;font-size:18px;flex-shrink:0}
-/* PÁGINAS NOVAS - SOBRE, SERVIÇOS, PROJETOS, CONTACTOS */
+/* OUTRAS PÁGINAS */
 .page-hero{background:var(--navy);color:#fff;padding:36px 20px}
 .page-hero .inner{max-width:1200px;margin:auto}
 .page-hero h1{font-size:36px}
@@ -86,25 +86,24 @@ nav a.active{background:var(--gold);padding:8px 18px;border-radius:20px;color:#1
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .info-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
 .info-item i{width:38px;height:38px;background:var(--navy);color:#fff;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.circulo-img{overflow:hidden;padding:0!important}
+.circulo-img img{width:100%;height:100%;object-fit:cover;display:block}
 .map{background:#EAF0F5;border-radius:12px;height:160px;display:grid;place-items:center;font-weight:700;color:var(--navy)}
 form{background:#fff;border:1px solid #E6EAF0;border-radius:12px;padding:20px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
 input,select,textarea{width:100%;padding:11px;border:1px solid #ddd;border-radius:8px;margin-bottom:12px;font-family:inherit}
 .form2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 footer{background:var(--navy);color:#fff;text-align:center;padding:18px;font-size:13px}
+/* SÓ TELEMÓVEL - NÃO MEXA NO COMPUTADOR */
 @media(max-width:900px){
-  .header-wrap{flex-wrap:wrap}
-  nav{display:flex;flex-wrap:wrap;gap:10px;width:100%;order:3;padding-top:8px;border-top:1px solid #eee}
-  nav a{font-size:13px;padding:6px 10px;background:#F6F8FB;border-radius:20px}
+  .header-wrap{flex-wrap:wrap;padding:10px 14px;gap:10px}
+  .logo img{height:42px}
+  nav{width:100%;order:3;display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid #eee}
+  nav a{font-size:13px;padding:6px 12px;background:#F6F8FB;border-radius:20px}
   nav a.active{padding:6px 12px}
   .btn-gold{font-size:13px;padding:9px 14px}
-  .logo img{height:42px}
-  .hero h1{font-size:32px;line-height:1.1;word-break:break-word;max-width:100%}
+  .hero h1{font-size:32px;line-height:1.1;max-width:100%;word-break:break-word}
   .hero-inner{padding:30px 16px}
-  .topbar .wrap{font-size:12px}
   .strip-wrap{grid-template-columns:1fr 1fr}
   .about,.grid2,.cards3,.projects,.contact-grid{grid-template-columns:1fr}
   .stats-wrap{grid-template-columns:1fr 1fr}
 }
-
-.circulo-img{overflow:hidden;padding:0!important}
-.circulo-img img{width:100%;height:100%;object-fit:cover;display:block}
